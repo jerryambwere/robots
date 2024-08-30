@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+/* Container for enlisted bots */
+.enlisted-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* List of bots */
+.bots-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual bot card */
+.bot-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(8px);
+}
+
+.bot-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Bot avatar */
+.bot-avatar {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Bot information */
+.bot-info {
+  padding: 15px;
+}
+
+.bot-name {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.bot-class {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Bot stats */
+.bot-stats p {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+/* Terminate button */
+.btn-terminate {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.btn-terminate:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+.btn-terminate::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s;
+}
+
+.btn-terminate:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 768px) {
+  .bot-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .bot-name {
+    font-size: 1.2em;
+  }
+
+  .bot-class {
+    font-size: 1em;
+  }
+
+  .btn-terminate {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}

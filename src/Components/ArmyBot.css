@@ -1,0 +1,141 @@
+/* General Styles */
+.army-bots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #f0f4f8;
+    min-height: 100vh;
+  }
+  
+  .bot-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .bot-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .bot-name {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .bot-details p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .icon {
+    margin-right: 8px;
+  }
+  
+  .health-icon {
+    color: #ff0000;
+  }
+  
+  .damage-icon {
+    color: blue;
+  }
+  
+  .armor-icon {
+    color: #42464c;
+  }
+  
+  .class-icon,
+  .catchphrase-icon {
+    color: #444;
+  }
+  
+  .timestamps {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .btn-enlist {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-enlist:hover {
+    background: #0056b3;
+  }
+  
+  #container-stars,
+  #glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  #glow .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    width: 50px;
+    height: 50px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  #glow .circle:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .bot-card {
+      padding: 15px;
+    }
+  
+    .bot-avatar {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .bot-name {
+      font-size: 1.5em;
+    }
+  
+    .bot-details p {
+      font-size: 1em;
+    }
+  
+    .btn-enlist {
+      font-size: 1em;
+      padding: 8px 16px;
+    }
+  }
+  
